@@ -36,7 +36,7 @@
 
         if(!$codeProd=="" && !$nameProd=="" && !$cateProd=="" && !$priceProd=="" && !$modelProd=="" && !$marcaProd=="" && !$stockProd=="" && !$codePProd=="" && !$_FILES['img']['name']==""){
             $verificar=  ejecutarSQL::consultar("select * from producto where CodigoProd='".$codeProd."'");
-            $verificaltotal = mysql_num_rows($verificar);
+            $verificaltotal = mysqli_num_rows($verificar);
             if($verificaltotal<=0){
                 if(move_uploaded_file($_FILES['img']['tmp_name'],"../assets/img-products/".$_FILES['img']['name'])){
                     if(consultasSQL::InsertSQL("producto", "CodigoProd, NombreProd, CodigoCat, Precio, Modelo, Marca, Stock, NITProveedor, Imagen, Nombre", "'$codeProd','$nameProd','$cateProd','$priceProd', '$modelProd','$marcaProd','$stockProd','$codePProd','".$_FILES['img']['name']."','$adminProd'")){

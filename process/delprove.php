@@ -6,7 +6,7 @@ include '../library/consulSQL.php';
 sleep(5);
 $nitProve= $_POST['nit-prove'];
 $cons=  ejecutarSQL::consultar("select * from proveedor where NITProveedor='$nitProve'");
-$totalprove = mysql_num_rows($cons);
+$totalprove = mysqli_num_rows($cons);
 
 if($totalprove>0){
     if(consultasSQL::DeleteSQL('proveedor', "NITProveedor='".$nitProve."'")){

@@ -14,7 +14,7 @@ $emailCliente= $_POST['clien-email'];
 
 if(!$nitCliente=="" && !$nameCliente=="" && !$apeCliente=="" && !$dirCliente=="" && !$phoneCliente=="" && !$emailCliente=="" && !$fullnameCliente==""){
     $verificar=  ejecutarSQL::consultar("select * from cliente where NIT='".$nitCliente."'");
-    $verificaltotal = mysql_num_rows($verificar);
+    $verificaltotal = mysqli_num_rows($verificar);
     if($verificaltotal<=0){
         if(consultasSQL::InsertSQL("cliente", "NIT, Nombre, NombreCompleto, Apellido, Direccion, Clave, Telefono, Email", "'$nitCliente','$nameCliente','$fullnameCliente','$apeCliente','$dirCliente', '$passCliente','$phoneCliente','$emailCliente'")){
             echo '<img src="assets/img/ok.png" class="center-all-contens"><br>El registro se completo con éxito';

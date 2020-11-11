@@ -6,7 +6,7 @@ include '../library/consulSQL.php';
 sleep(5);
 $nameAd= $_POST['name-admin'];
 $consA=  ejecutarSQL::consultar("select * from administrador where Nombre='$nameAd'");
-$totalA = mysql_num_rows($consA);
+$totalA = mysqli_num_rows($consA);
 
 if($totalA>0){
     if(consultasSQL::DeleteSQL('administrador', "Nombre='".$nameAd."'")){

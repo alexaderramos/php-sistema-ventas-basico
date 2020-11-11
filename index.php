@@ -22,9 +22,9 @@
                   include 'library/configServer.php';
                   include 'library/consulSQL.php';
                   $consulta= ejecutarSQL::consultar("select * from producto where Stock > 0 limit 6");
-                  $totalproductos = mysql_num_rows($consulta);
+                  $totalproductos = mysqli_num_rows($consulta);
                   if($totalproductos>0){
-                      while($fila=mysql_fetch_array($consulta)){
+                      while($fila=mysqli_fetch_array($consulta)){
                          echo '
                         <div class="col-xs-12 col-sm-6 col-md-4">
                              <div class="thumbnail">

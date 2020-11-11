@@ -12,7 +12,7 @@ if(isset($_GET['precio'])){
 echo '<table class="table table-bordered">';
 for($i = 0;$i< $_SESSION['contador'];$i++){
     $consulta=ejecutarSQL::consultar("select * from producto where CodigoProd='".$_SESSION['producto'][$i]."'");
-    while($fila = mysql_fetch_array($consulta)) {
+    while($fila = mysqli_fetch_array($consulta)) {
             echo "<tr><td>".$fila['NombreProd']."</td><td> ".$fila['Precio']."</td></tr>";
     $suma += $fila['Precio'];
     }

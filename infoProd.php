@@ -26,7 +26,7 @@ include './library/consulSQL.php';
                 <?php 
                     $CodigoProducto=$_GET['CodigoProd'];
                     $productoinfo=  ejecutarSQL::consultar("select * from producto where CodigoProd='".$CodigoProducto."'");
-                    while($fila=mysql_fetch_array($productoinfo)){
+                    while($fila=mysqli_fetch_array($productoinfo)){
                         echo '
                             <div class="col-xs-12 col-sm-6">
                                 <h3 class="text-center">Información de producto</h3>

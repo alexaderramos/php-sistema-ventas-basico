@@ -2,19 +2,20 @@
 /* Clase para ejecutar las consultas a la Base de Datos*/
 class ejecutarSQL {
     public static function conectar(){
-        if(!$con=  mysql_connect(SERVER,USER,PASS)){
+        if(!$con=  mysqli_connect(SERVER,USER,PASS, BD)){
             die("Error en el servidor, verifique sus datos");
         }
-        if (!mysql_select_db(BD)) {
+       /* if (!mysql_select_db(BD)) {
             die("Error al conectar con la base de datos, verifique el nombre de la base de datos");
-        }
+        }*/
         /* Codificar la información de la base de datos a UTF8*/
-        mysql_set_charset('utf8',$con);
+        mysqli_set_charset($con,'utf8');
         return $con;  
     }
     public static function consultar($query) {
-        if (!$consul = mysql_query($query, ejecutarSQL::conectar())) {
-            die(mysql_error().'Error en la consulta SQL ejecutada');
+        $link = ejecutarSQL::conectar();
+        if (!$consul = mysqli_query($link, $query)) {
+            die(mysqli_error($link).'Error en la consulta SQL ejecutada');
         }
         return $consul;
     }  

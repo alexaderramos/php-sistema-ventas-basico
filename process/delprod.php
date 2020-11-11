@@ -6,8 +6,8 @@
  
  $codeProd= $_POST['prod-code'];
  $cons=  ejecutarSQL::consultar("select * from producto where CodigoProd='$codeProd'");
- $totalproductos = mysql_num_rows($cons);
- $tmp=  mysql_fetch_array($cons);
+ $totalproductos = mysqli_num_rows($cons);
+ $tmp=  mysqli_fetch_array($cons);
  $imagen=$tmp['Imagen'];
  if($totalproductos>0){
     if(consultasSQL::DeleteSQL('producto', "CodigoProd='".$codeProd."'")){

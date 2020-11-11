@@ -12,7 +12,7 @@ $webProve= $_POST['prove-web'];
 
 if(!$nitProve=="" && !$nameProve=="" && !$dirProve=="" && !$telProve=="" && !$webProve==""){
     $verificar=  ejecutarSQL::consultar("select * from proveedor where NITProveedor='".$nitProve."'");
-    $verificaltotal = mysql_num_rows($verificar);
+    $verificaltotal = mysqli_num_rows($verificar);
     if($verificaltotal<=0){
         if(consultasSQL::InsertSQL("proveedor", "NITProveedor, NombreProveedor, Direccion, Telefono, PaginaWeb", "'$nitProve','$nameProve','$dirProve','$telProve','$webProve'")){
             echo '<img src="assets/img/correcto.png" class="center-all-contens"><br><p class="lead text-center">Proveedor añadido éxitosamente</p>';

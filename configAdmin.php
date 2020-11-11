@@ -47,7 +47,7 @@
                                 <select class="form-control" name="prod-categoria">
                                     <?php 
                                         $categoriac=  ejecutarSQL::consultar("select * from categoria");
-                                        while($catec=mysql_fetch_array($categoriac)){
+                                        while($catec=mysqli_fetch_array($categoriac)){
                                             echo '<option value="'.$catec['CodigoCat'].'">'.$catec['Nombre'].'</option>';
                                         }
                                     ?>
@@ -74,7 +74,7 @@
                                 <select class="form-control" name="prod-codigoP">
                                     <?php 
                                         $proveedoresc=  ejecutarSQL::consultar("select * from proveedor");
-                                        while($provc=mysql_fetch_array($proveedoresc)){
+                                        while($provc=mysqli_fetch_array($proveedoresc)){
                                             echo '<option value="'.$provc['NITProveedor'].'">'.$provc['NombreProveedor'].'</option>';
                                         }
                                     ?>
@@ -101,7 +101,7 @@
                                      <select class="form-control" name="prod-code">
                                          <?php 
                                              $productoc=  ejecutarSQL::consultar("select * from producto");
-                                             while($prodc=mysql_fetch_array($productoc)){
+                                             while($prodc=mysqli_fetch_array($productoc)){
                                                  echo '<option value="'.$prodc['CodigoProd'].'">'.$prodc['Marca'].'-'.$prodc['NombreProd'].'-'.$prodc['Modelo'].'</option>';
                                              }
                                          ?>
@@ -136,7 +136,7 @@
                                       <?php
                                         $productos=  ejecutarSQL::consultar("select * from producto");
                                         $upr=1;
-                                        while($prod=mysql_fetch_array($productos)){
+                                        while($prod=mysqli_fetch_array($productos)){
                                             echo '
                                                 <div id="update-product">
                                                   <form method="post" action="process/updateProduct.php" id="res-update-product-'.$upr.'">
@@ -148,14 +148,14 @@
                                                         <td><input class="form-control" type="text" name="prod-name" maxlength="30" required="" value="'.$prod['NombreProd'].'"></td>
                                                         <td>';
                                                             $categoriac3=  ejecutarSQL::consultar("select * from categoria where CodigoCat='".$prod['CodigoCat']."'");
-                                                            while($catec3=mysql_fetch_array($categoriac3)){
+                                                            while($catec3=mysqli_fetch_array($categoriac3)){
                                                                 $codeCat=$catec3['CodigoCat'];
                                                                 $nameCat=$catec3['Nombre'];
                                                             }
                                                       echo '<select class="form-control" name="prod-category">';
                                                                 echo '<option value="'.$codeCat.'">'.$nameCat.'</option>';
                                                                 $categoriac2=  ejecutarSQL::consultar("select * from categoria");
-                                                                while($catec2=mysql_fetch_array($categoriac2)){
+                                                                while($catec2=mysqli_fetch_array($categoriac2)){
                                                                     if($catec2['CodigoCat']==$codeCat){
                                                                         
                                                                     }else{
@@ -171,14 +171,14 @@
                                                         <td><input class="form-control" type="text-area" name="stock-prod" maxlength="30" required="" value="'.$prod['Stock'].'"></td>
                                                         <td>';
                                                            $proveedoresc3=  ejecutarSQL::consultar("select * from proveedor where NITProveedor='".$prod['NITProveedor']."'");
-                                                           while($provc3=mysql_fetch_array($proveedoresc3)){
+                                                           while($provc3=mysqli_fetch_array($proveedoresc3)){
                                                                     $nombreP=$provc3['NombreProveedor'];
                                                                     $nitP=$provc3['NITProveedor'];
                                                             }
                                                        echo '<select class="form-control" name="prod-Prove">';
                                                                 echo '<option value="'.$nitP.'">'.$nombreP.'</option>';
                                                                 $proveedoresc2=  ejecutarSQL::consultar("select * from proveedor");
-                                                                while($provc2=mysql_fetch_array($proveedoresc2)){
+                                                                while($provc2=mysqli_fetch_array($proveedoresc2)){
                                                                     if($provc2['NITProveedor']==$nitP){
                                                                         
                                                                     }else{
@@ -249,7 +249,7 @@
                                     <select class="form-control" name="nit-prove">
                                         <?php 
                                             $proveNIT=  ejecutarSQL::consultar("select * from proveedor");
-                                            while($PN=mysql_fetch_array($proveNIT)){
+                                            while($PN=mysqli_fetch_array($proveNIT)){
                                                 echo '<option value="'.$PN['NITProveedor'].'">'.$PN['NITProveedor'].' - '.$PN['NombreProveedor'].'</option>';
                                             }
                                         ?>
@@ -281,7 +281,7 @@
                                       <?php
                                               $proveedores=  ejecutarSQL::consultar("select * from proveedor");
                                               $up=1;
-                                              while($prov=mysql_fetch_array($proveedores)){
+                                              while($prov=mysqli_fetch_array($proveedores)){
                                                   echo '
                                                       <div id="update-proveedor">
                                                         <form method="post" action="process/updateProveedor.php" id="res-update-prove-'.$up.'">
@@ -348,7 +348,7 @@
                                         <select class="form-control" name="categ-code">
                                             <?php 
                                                 $categoriav=  ejecutarSQL::consultar("select * from categoria");
-                                                while($categv=mysql_fetch_array($categoriav)){
+                                                while($categv=mysqli_fetch_array($categoriav)){
                                                     echo '<option value="'.$categv['CodigoCat'].'">'.$categv['CodigoCat'].' - '.$categv['Nombre'].'</option>';
                                                 }
                                             ?>
@@ -378,7 +378,7 @@
                                             <?php
                                               $categorias=  ejecutarSQL::consultar("select * from categoria");
                                               $ui=1;
-                                              while($cate=mysql_fetch_array($categorias)){
+                                              while($cate=mysqli_fetch_array($categorias)){
                                                   echo '
                                                       <div id="update-category">
                                                         <form method="post" action="process/updateCategory.php" id="res-update-category-'.$ui.'">
@@ -439,7 +439,7 @@
                                         <select class="form-control" name="name-admin">
                                             <?php 
                                                 $adminCon=  ejecutarSQL::consultar("select * from administrador");
-                                                while($AdminD=mysql_fetch_array($adminCon)){
+                                                while($AdminD=mysqli_fetch_array($adminCon)){
                                                     echo '<option value="'.$AdminD['Nombre'].'">'.$AdminD['Nombre'].'</option>';
                                                 }
                                             ?>
@@ -467,7 +467,7 @@
                                         <select class="form-control" name="num-pedido">
                                             <?php 
                                                 $pedidoC=  ejecutarSQL::consultar("select * from venta");
-                                                while($pedidoD=mysql_fetch_array($pedidoC)){
+                                                while($pedidoD=mysqli_fetch_array($pedidoC)){
                                                     echo '<option value="'.$pedidoD['NumPedido'].'">Pedido #'.$pedidoD['NumPedido'].' - Estado('.$pedidoD['Estado'].') - Fecha('.$pedidoD['Fecha'].')</option>';
                                                 }
                                             ?>
@@ -498,7 +498,7 @@
                                           <?php
                                             $pedidoU=  ejecutarSQL::consultar("select * from venta");
                                             $upp=1;
-                                            while($peU=mysql_fetch_array($pedidoU)){
+                                            while($peU=mysqli_fetch_array($pedidoU)){
                                                 echo '
                                                     <div id="update-pedido">
                                                       <form method="post" action="process/updatePedido.php" id="res-update-pedido-'.$upp.'">
@@ -507,7 +507,7 @@
                                                             <td>'.$peU['Fecha'].'</td>
                                                             <td>';
                                                                 $conUs= ejecutarSQL::consultar("select * from cliente where NIT='".$peU['NIT']."'");
-                                                                while($UsP=mysql_fetch_array($conUs)){
+                                                                while($UsP=mysqli_fetch_array($conUs)){
                                                                     echo $UsP['Nombre'];
                                                                 }
                                                     echo   '</td>

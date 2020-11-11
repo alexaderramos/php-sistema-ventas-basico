@@ -27,7 +27,7 @@ include './library/consulSQL.php';
                           <!-- ==================== Lista categorias =============== -->
                           <?php
                             $categorias=  ejecutarSQL::consultar("select * from categoria");
-                            while($cate=mysql_fetch_array($categorias)){
+                            while($cate=mysqli_fetch_array($categorias)){
                                 echo '
                                     <li>
                                         <a href="#'.$cate['CodigoCat'].'" tabindex="-1" role="tab" id="'.$cate['CodigoCat'].'-tab" data-toggle="tab" aria-controls="'.$cate['CodigoCat'].'" aria-expanded="false">'.$cate['Nombre'].'
@@ -45,9 +45,9 @@ include './library/consulSQL.php';
                         <div class="row">
                         <?php
                             $consulta=  ejecutarSQL::consultar("select * from producto where Stock > 0");
-                            $totalproductos = mysql_num_rows($consulta);
+                            $totalproductos = mysqli_num_rows($consulta);
                             if($totalproductos>0){
-                                while($fila=mysql_fetch_array($consulta)){
+                                while($fila=mysqli_fetch_array($consulta)){
                                    echo '
                                   <div class="col-xs-12 col-sm-6 col-md-4">
                                        <div class="thumbnail">
@@ -76,12 +76,12 @@ include './library/consulSQL.php';
                       <!-- ==================== Contenedores de categorias =============== -->
                       <?php
                         $consultar_categorias= ejecutarSQL::consultar("select * from categoria");
-                        while($categ=mysql_fetch_array($consultar_categorias)){
+                        while($categ=mysqli_fetch_array($consultar_categorias)){
                             echo '<div role="tabpanel" class="tab-pane fade active in" id="'.$categ['CodigoCat'].'" aria-labelledby="'.$categ['CodigoCat'].'-tab"><br>';
                                 $consultar_productos= ejecutarSQL::consultar("select * from producto where CodigoCat='".$categ['CodigoCat']."' and Stock > 0");
-                                $totalprod = mysql_num_rows($consultar_productos);
+                                $totalprod = mysqli_num_rows($consultar_productos);
                                 if($totalprod>0){
-                                   while($prod=mysql_fetch_array($consultar_productos)){
+                                   while($prod=mysqli_fetch_array($consultar_productos)){
                                       echo '
                                         <div class="col-xs-12 col-sm-6 col-md-4">
                                              <div class="thumbnail">

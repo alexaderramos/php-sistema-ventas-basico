@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9f90cd3-d2c1-4d95-a905-e9590b893e69" name="Default Changelist" comment="" />
+    <list default="true" id="d9f90cd3-d2c1-4d95-a905-e9590b893e69" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/configAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infoProd.php" beforeDir="false" afterPath="$PROJECT_DIR$/infoProd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/consulSQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/consulSQL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/carrito.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/carrito.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/confirmcompra.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/confirmcompra.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/delPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/delPedido.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/deladmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/deladmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/delcategori.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/delcategori.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/delprod.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/delprod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/delprove.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/delprove.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/regAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/regAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/regcategori.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/regcategori.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/regclien.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/regclien.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/regproduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/regproduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/regprove.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/regprove.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +29,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1k9lUXafraMf0XyDzDVDexeZgRK" />
   <component name="ProjectViewState">
@@ -32,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605120706078</updated>
       <workItem from="1605120707215" duration="1905000" />
+      <workItem from="1605122615574" duration="2465000" />
     </task>
     <servers />
   </component>

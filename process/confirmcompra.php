@@ -15,12 +15,12 @@ if($num=='log'){
 sleep(3);
 
 $verdata=  ejecutarSQL::consultar("select * from cliente where Clave='".$passClien."' and Nombre='".$nameClien."'");
-$num=  mysql_num_rows($verdata);
+$num=  mysqli_num_rows($verdata);
 if($num>0){
   if($_SESSION['sumaTotal']>0){
 
 
-  $data= mysql_fetch_array($verdata);
+  $data= mysqli_fetch_array($verdata);
   $nitC=$data['NIT'];
   $StatusV="Pendiente";
   
@@ -29,7 +29,7 @@ if($num>0){
   
   /*recuperando el número del pedido actual*/
   $verId=ejecutarSQL::consultar("select * from venta where NIT='$nitC' order by NumPedido desc limit 1");
-  while($fila=mysql_fetch_array($verId)){
+  while($fila=mysqli_fetch_array($verId)){
      $Numpedido=$fila['NumPedido'];
   }
   
@@ -39,7 +39,7 @@ if($num>0){
 
       /*Restando un stock a cada producto seleccionado en el carrito*/
     $prodStock=ejecutarSQL::consultar("select * from producto where CodigoProd='".$_SESSION['producto'][$i]."'");
-    while($fila = mysql_fetch_array($prodStock)) {
+    while($fila = mysqli_fetch_array($prodStock)) {
         $existencias = $fila['Stock'];
         consultasSQL::UpdateSQL("producto", "Stock=('$existencias'-1)", "CodigoProd='".$_SESSION['producto'][$i]."'");
     }

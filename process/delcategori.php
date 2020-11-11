@@ -6,7 +6,7 @@ include '../library/consulSQL.php';
 sleep(5);
 $codeCateg= $_POST['categ-code'];
 $cons=  ejecutarSQL::consultar("select * from categoria where CodigoCat='$codeCateg'");
-$totalcateg = mysql_num_rows($cons);
+$totalcateg = mysqli_num_rows($cons);
 
 if($totalcateg>0){
     if(consultasSQL::DeleteSQL('categoria', "CodigoCat='".$codeCateg."'")){

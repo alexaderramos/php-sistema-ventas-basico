@@ -9,7 +9,7 @@ $passAdmin= md5($_POST['admin-pass']);
 
 if(!$nameAdmin=="" && !$passAdmin==""){
     $verificar=  ejecutarSQL::consultar("select * from administrador where Nombre='".$nameAdmin."'");
-    $verificaltotal = mysql_num_rows($verificar);
+    $verificaltotal = mysqli_num_rows($verificar);
     if($verificaltotal<=0){
         if(consultasSQL::InsertSQL("administrador", "Nombre, Clave", "'$nameAdmin','$passAdmin'")){
             echo '<img src="assets/img/correcto.png" class="center-all-contens"><br><p class="lead text-center">Administrador añadido éxitosamente</p>';

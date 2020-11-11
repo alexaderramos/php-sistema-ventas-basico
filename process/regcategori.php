@@ -10,7 +10,7 @@ $descripCateg= $_POST['categ-descrip'];
 
 if(!$codeCateg=="" && !$nameCateg=="" && !$descripCateg==""){
     $verificar=  ejecutarSQL::consultar("select * from categoria where CodigoCat='".$codeCateg."'");
-    $verificaltotal = mysql_num_rows($verificar);
+    $verificaltotal = mysqli_num_rows($verificar);
     if($verificaltotal<=0){
         if(consultasSQL::InsertSQL("categoria", "CodigoCat, Nombre, Descripcion", "'$codeCateg','$nameCateg','$descripCateg'")){
             echo '<img src="assets/img/correcto.png" class="center-all-contens"><br><p class="lead text-center">Categoría añadida éxitosamente</p>';

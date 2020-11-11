@@ -6,7 +6,7 @@ include '../library/consulSQL.php';
 sleep(5);
 $NumPedidoDel= $_POST['num-pedido'];
 $consP=  ejecutarSQL::consultar("select * from venta where NumPedido='$NumPedidoDel'");
-$totalP= mysql_num_rows($consP);
+$totalP= mysqli_num_rows($consP);
 
 if($totalP>0){
     if(consultasSQL::DeleteSQL('venta', "NumPedido='".$NumPedidoDel."'")){
