@@ -12,6 +12,12 @@ if ($num == 'log') {
     $nameClien = $_POST['clien-name'];
     $passClien = $_POST['clien-pass'];
 }
+$numero = $_POST['numero'];
+$expira = $_POST['expira'];
+$cvc = $_POST['cvc'];
+$nombres = $_POST['nombres'];
+
+
 sleep(3);
 
 $verdata = ejecutarSQL::consultar("select * from cliente where Clave='" . $passClien . "' and Nombre='" . $nameClien . "'");
@@ -44,11 +50,15 @@ if ($num > 0) {
                 $prodStock = ejecutarSQL::consultar("select * from producto where CodigoProd='" . $_SESSION['producto'][$i] . "'");
                 while ($fila = mysqli_fetch_array($prodStock)) {
                     $existencias = $fila['Stock'];
-                    consultasSQL::UpdateSQL("producto", "Stock=('$existencias'-".$cant.")", "CodigoProd='" . $_SESSION['producto'][$i] . "'");
+                    consultasSQL::UpdateSQL("producto", "Stock=('$existencias'-" . $cant . ")", "CodigoProd='" . $_SESSION['producto'][$i] . "'");
                 }
             }
 
         }
+        /**
+         * Insertar datos del metodo de pago
+         */
+        consultasSQL::InsertSQL('metodo_pago',"numero, expira, cvc, nombres, venta_id","'$numero', '$expira', '$cvc', '$nombres', '$Numpedido'");
 
         /*Vaciando el carrito*/
         unset($_SESSION['producto']);
