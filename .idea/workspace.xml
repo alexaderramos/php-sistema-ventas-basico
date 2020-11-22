@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9f90cd3-d2c1-4d95-a905-e9590b893e69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/carrito.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/carrito.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/pedido.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/confirmcompra.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/confirmcompra.php" afterDir="false" />
-    </list>
+    <list default="true" id="d9f90cd3-d2c1-4d95-a905-e9590b893e69" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +14,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1k9lUXafraMf0XyDzDVDexeZgRK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,7 +25,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DataBase" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -55,7 +52,7 @@
       <workItem from="1605881814637" duration="881000" />
       <workItem from="1606020438938" duration="9255000" />
       <workItem from="1606059354559" duration="5195000" />
-      <workItem from="1606077361189" duration="1670000" />
+      <workItem from="1606077361189" duration="2144000" />
     </task>
     <servers />
   </component>
