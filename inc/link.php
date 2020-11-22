@@ -5,9 +5,11 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/media.css">
+<link rel="stylesheet" href="css/toastr.min.css">
 <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/logo.ico" />
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/autohidingnavbar.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/carrito.js"></script>
+<script src="js/toastr.min.js"></script>

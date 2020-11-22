@@ -3,24 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d9f90cd3-d2c1-4d95-a905-e9590b893e69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/configAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infoProd.php" beforeDir="false" afterPath="$PROJECT_DIR$/infoProd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/consulSQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/consulSQL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/link.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/link.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/carrito.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/carrito.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/process/carrito.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/carrito.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/confirmcompra.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/confirmcompra.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/delPedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/delPedido.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/deladmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/deladmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/delcategori.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/delcategori.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/delprod.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/delprod.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/delprove.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/delprove.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/regAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/regAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/regcategori.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/regcategori.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/regclien.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/regclien.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/regproduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/regproduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/regprove.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/regprove.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +25,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="P:\web\www\comercial-php\css" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d9f90cd3-d2c1-4d95-a905-e9590b893e69" name="Default Changelist" comment="" />
@@ -56,11 +50,14 @@
       <updated>1605120706078</updated>
       <workItem from="1605120707215" duration="1905000" />
       <workItem from="1605122615574" duration="2465000" />
+      <workItem from="1605313213003" duration="2089000" />
+      <workItem from="1605881814637" duration="881000" />
+      <workItem from="1606020438938" duration="5485000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1573" y="330" width="1176" height="235" key="#SQL_Dialects" timestamp="1605121437159">
