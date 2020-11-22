@@ -7,7 +7,7 @@ $suma = 0;
 /**
  * precio es un alias para el id
  */
-if (isset($_GET['precio'])) {
+if (isset($_GET['precio']) && !isset($_GET['accion'])) {
     $id = $_GET['precio'];
 
     //verificamos si hay elementos en el carrito de compras
@@ -34,8 +34,34 @@ if (isset($_GET['precio'])) {
         $_SESSION['cantidad'][$cont] = 1;
         $_SESSION['contador']++;
     }
+} elseif (isset($_GET['precio']) && isset($_GET['accion'])) {
+    $accion = $_GET['accion'];
+    $id = $_GET['precio'];
+    $cont = $_SESSION['contador'];
 
 
+    for ($i = 0; $i < $cont; $i++) {
+        $prod_id = $_SESSION['producto'][$i];
+        if ($id == $prod_id) {
+            switch ($accion) {
+                case 'agregar':
+                    $_SESSION['cantidad'][$i]++;
+                    break;
+                case 'quitar';
+                    if ($_SESSION['cantidad'][$i] <= 1) {
+                        $_SESSION['cantidad'][$i] = 1;
+                    } else {
+                        $_SESSION['cantidad'][$i]--;
+                    }
+                    break;
+                case 'eliminar':
+                    unset( $_SESSION['producto'][$i]);
+                    unset( $_SESSION['cantidad'][$i]);
+            }
+
+            break;
+        }
+    }
 }
 echo '<div class="panel" style="color: #000000">';
 echo '<table class="table table-bordered table-hover">';
@@ -60,7 +86,7 @@ for ($i = 0; $i < $_SESSION['contador']; $i++) {
                     <button onclick='eliminar(" . $_SESSION['producto'][$i] . ")' class='btn btn-danger btn-sm'><i class='fa fa-trash'></i></button>
                     </td>
             </tr>";
-        $suma += $fila['Precio'];
+        $suma += $fila['Precio']*$_SESSION['cantidad'][$i];
     }
 }
 echo "<tr><td>Subtotal</td><td>$" . number_format($suma, 2) . "</td></tr>";

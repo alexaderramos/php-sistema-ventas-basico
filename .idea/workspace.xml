@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d9f90cd3-d2c1-4d95-a905-e9590b893e69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/link.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/link.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/carrito.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/carrito.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/process/carrito.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/carrito.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/confirmcompra.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/confirmcompra.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,7 @@
       <workItem from="1605122615574" duration="2465000" />
       <workItem from="1605313213003" duration="2089000" />
       <workItem from="1605881814637" duration="881000" />
-      <workItem from="1606020438938" duration="5485000" />
+      <workItem from="1606020438938" duration="8693000" />
     </task>
     <servers />
   </component>

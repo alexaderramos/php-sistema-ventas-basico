@@ -1,9 +1,7 @@
 $(document).ready(function() {
     $('#carrito-compras-tienda').load("process/carrito.php");
     $(".botonCarrito").click(function(){
-        alert($(this).val())
         $('#carrito-compras-tienda').load("process/carrito.php?precio="+$(this).val());
-        toastr.info('Are you the 6 fingered man?')
         $('.modal-carrito').modal('show');
     });
     $(".carrito-button-nav").click(function(){
@@ -12,14 +10,15 @@ $(document).ready(function() {
 });
 
 function quitar(id) {
-    console.log('quitar '+id)
+    $('#carrito-compras-tienda').load("process/carrito.php?precio="+id+'&accion=quitar');
 }
 
 function agregar(id) {
-    console.log('agregar '+id)
+    $('#carrito-compras-tienda').load("process/carrito.php?precio="+id+'&accion=agregar');
 
 }
 
 function eliminar(id) {
-
+    $('#carrito-compras-tienda').load("process/carrito.php?precio="+id+'&accion=eliminar');
+    toastr.success('Eliminado del carrito correctamente')
 }
