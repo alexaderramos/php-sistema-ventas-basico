@@ -1,5 +1,5 @@
 <?php
-define("USER", "root");
-define("SERVER", "localhost");
-define("BD", "store");
-define("PASS", "secret");
+define("USER", "artisans_comercial_php");
+define("SERVER", "artisansdev.wolfweb.store");
+define("BD", "artisans_comercial_php");
+define("PASS", "comercial_php");
