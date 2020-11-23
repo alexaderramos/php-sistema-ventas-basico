@@ -80,10 +80,10 @@ for ($i = 0; $i < $_SESSION['contador']; $i++) {
                     <td>" . $fila['NombreProd'] . "</td>
                     <td> " . $fila['Precio'] . "</td>
                     <td>
-                    <button onclick='quitar(" . $_SESSION['producto'][$i] . ")' class='btn btn-sm btn-primary'><i class='fa fa-minus'></i></button> 
+                     <button onclick=quitar('" . $_SESSION['producto'][$i] . "') class='btn btn-sm btn-primary'><i class='fa fa-minus'></i></button> 
                     <span style='padding-right: 5px; padding-left: 5px'> " . $_SESSION['cantidad'][$i] . "</span>
-                    <button onclick='agregar(" . $_SESSION['producto'][$i] . ")' class='btn btn-sm btn-primary'><i class='fa fa-plus'></i></button>
-                    <button onclick='eliminar(" . $_SESSION['producto'][$i] . ")' class='btn btn-danger btn-sm'><i class='fa fa-trash'></i></button>
+                    <button onclick=agregar('" . $_SESSION['producto'][$i] . "') class='btn btn-sm btn-primary'><i class='fa fa-plus'></i></button>
+                    <button onclick=eliminar('" . $_SESSION['producto'][$i] . "') class='btn btn-danger btn-sm'><i class='fa fa-trash'></i></button>
                     </td>
             </tr>";
         $suma += $fila['Precio']*$_SESSION['cantidad'][$i];
